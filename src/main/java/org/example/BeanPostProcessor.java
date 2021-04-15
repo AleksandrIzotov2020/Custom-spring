@@ -1,5 +1,6 @@
 package org.example;
 
+
 public interface BeanPostProcessor {
-    void configure(Object t);
+    void configure(Object t, ApplicationContext context);
 }

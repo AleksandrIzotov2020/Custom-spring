@@ -21,7 +21,7 @@ public class InjectPropertyAnnotationBeanPostProcessor implements BeanPostProces
 
     @Override
     @SneakyThrows
-    public void configure(Object t) {
+    public void configure(Object t, ApplicationContext context) {
         Class<?> implClass = t.getClass();
         for(Field field: implClass.getDeclaredFields()){
             InjectProperty annotation = field.getAnnotation(InjectProperty.class);

@@ -9,9 +9,10 @@ package org.example;
 
 public class CoronaDesinfector {
 
-    /*Диктор*/
-    private Announcer announcer = ObjectFactory.getInstance().getBean(Announcer.class);
-    private Policeman policeman= ObjectFactory.getInstance().getBean(Policeman.class);
+    @InjectByType
+    private Announcer announcer; /*Диктор*/
+    @InjectByType
+    private Policeman policeman;
 
     public void start(Room room){
         announcer.announce("Начинаем дезинфекцию. Всем выйти из комнаты!");
