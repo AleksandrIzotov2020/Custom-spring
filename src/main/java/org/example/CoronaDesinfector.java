@@ -6,14 +6,14 @@ package org.example;
 *   I-
 *   D- Dependency inversion
 * */
-
+@WorkTime
 public class CoronaDesinfector {
 
     @InjectByType
     private Announcer announcer; /*Диктор*/
     @InjectByType
     private Policeman policeman;
-
+    @WorkTime
     public void start(Room room){
         announcer.announce("Начинаем дезинфекцию. Всем выйти из комнаты!");
         policeman.makePeopleLeaveRoom();
